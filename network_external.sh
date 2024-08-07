@@ -1,13 +1,13 @@
 #!/bin/bash
 
-. ${PWD}/fabric-samples/test-network/organizations/fabric-ca/registerEnroll.sh
-. ${PWD}/fabric-samples/test-network/scripts/utils.sh
+. ${PWD}/organizations/fabric-ca/registerEnroll.sh
+. ${PWD}/scripts/utils.sh
 export PATH=${PWD}/../bin:$PATH
 export FABRIC_CFG_PATH=${PWD}/configtx
 export VERBOSE=false
-REMOTE_IP="20.196.64.72"
-REMOTE_PATH_BASE="${PWD}/fabric-samples/test-network/organizations/fabric-ca"
-LOCAL_PATH_BASE="${PWD}/fabric-samples/test-network/organizations/fabric-ca"
+REMOTE_IP="fabric-ca"
+REMOTE_PATH_BASE="${PWD}/organizations/fabric-ca"
+LOCAL_PATH_BASE="${PWD}/organizations/fabric-ca"
 PASSWORD="Rhlwhlwhl2475*"
 USERNAME="sukamura"
 
