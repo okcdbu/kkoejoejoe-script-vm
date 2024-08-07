@@ -7,7 +7,17 @@ sudo apt-get install -y \
                     curl \
                         software-properties-common \
                             gnupg-agent
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <fabric-ca-address>"
+    exit 1
+fi
 
+FABRIC_CA_ADDRESS=$1
+
+echo "Updating /etc/hosts with fabric-ca address..."
+sudo -- sh -c "echo '$FABRIC_CA_ADDRESS fabric-ca' >> /etc/hosts"
+
+echo "System updated with fabric-ca address successfully."
 # Docker CE 설치
 echo "Docker CE 설치 중..."
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
