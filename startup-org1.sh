@@ -1,3 +1,4 @@
+#!/bin/bash
 # 시스템 업데이트 및 필수 패키지 설치
 echo "시스템 업데이트 및 필수 패키지 설치 중..."
 sudo apt-get update
@@ -61,5 +62,6 @@ curl -sSL https://bit.ly/2ysbOFE | bash -s -- 2.2.0 1.4.7 0.4.22
 
 curl -L -o ~/fabric-samples/test-network/network_external.sh https://raw.githubusercontent.com/okcdbu/kkoejoejoe-script-vm/main/network_external.sh
 curl -L -o ~/fabric-samples/test-network/organizations/fabric-ca/registerEnroll.sh https://raw.githubusercontent.com/okcdbu/kkoejoejoe-script-vm/main/registerEnroll.sh
-cd ~/fabric-samples/test-network/
+cd $PWD/fabric-samples/test-network/
+chmod +x network_external.sh
 ./network_external.sh 
