@@ -1,4 +1,5 @@
 #!/bin/bash
+
 . ${PWD}/organizations/fabric-ca/registerEnroll.sh
 . ./scripts/utils.sh
 export PATH=${PWD}/../bin:$PATH
