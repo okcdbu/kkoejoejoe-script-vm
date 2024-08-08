@@ -7,7 +7,9 @@ sudo apt-get install -y \
                 ca-certificates \
                     curl \
                         software-properties-common \
-                            gnupg-agent
+                            gnupg-agent \
+                            dos2unix \
+                            sshpass
 if [ $# -ne 1 ]; then
     echo "Usage: $0 <fabric-ca-address>"
     exit 1
