@@ -1,3 +1,4 @@
+#!/bin/bash
 # 시스템 업데이트 및 필수 패키지 설치
 echo "시스템 업데이트 및 필수 패키지 설치 중..."
 sudo apt-get update
@@ -59,3 +60,4 @@ sudo docker-compose -f docker-compose-ca.yaml up -d
 # 공용 ip /etc/host 에 fabric-orderer, fabric-ca 추가 필요
 # fabric-samples/test-network/organization/ordererOrg/fabric-*.yaml csr host fabric-ca 추가 필요
 echo "스크립트 실행 완료!"
+chmod 

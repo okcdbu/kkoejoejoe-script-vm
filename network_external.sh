@@ -57,5 +57,5 @@ res=$?
 if [ $res -ne 0 ]; then
   fatalln "Failed to generate orderer genesis block..."
 fi
-docker-compose -f docker/docker-compose-test-net.yaml up -d orderer.example.com peer0.org1.example.com peer0.org2.example.com 2>&1
-docker ps -a
+sudo docker-compose -f docker/docker-compose-test-net.yaml up -d orderer.example.com peer0.org1.example.com peer0.org2.example.com 2>&1
+sudo docker ps -a
