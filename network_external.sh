@@ -21,7 +21,7 @@ for ORG in "${ORG_DIRS[@]}"; do
 
     echo "Downloading certificate for $ORG..."
     
-    sudo /usr/bin/sshpass -p "$PASSWORD" scp "$USERNAME@$REMOTE_IP:$REMOTE_PATH" "$LOCAL_PATH"
+    sudo /usr/bin/sshpass -p "$PASSWORD" scp -o StrictHostKeyChecking=no "$USERNAME@$REMOTE_IP:$REMOTE_PATH" "$LOCAL_PATH"
     
     if [ $? -eq 0 ]; then
         echo "Successfully downloaded certificate for $ORG to $LOCAL_PATH"
