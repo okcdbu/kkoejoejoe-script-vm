@@ -24,7 +24,7 @@ sudo apt-get install -y docker-ce=5:27.0.2-1~ubuntu.20.04~focal docker-ce-cli=5:
 # Docker 서비스 시작 및 부팅 시 자동 시작 설정
 sudo systemctl start docker
 sudo systemctl enable docker
-
+sudo chmod 666 /var/run/docker.sock
 # Docker 설치 확인
 if sudo docker --version; then
             echo "Docker 설치 성공"
