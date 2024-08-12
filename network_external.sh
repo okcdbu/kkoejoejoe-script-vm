@@ -57,6 +57,6 @@ res=$?
 if [ $res -ne 0 ]; then
   fatalln "Failed to generate orderer genesis block..."
 fi
-sudo docker-compose -f docker/docker-compose-test-net.yaml up -d orderer.example.com peer0.org1.example.com peer0.org2.example.com 2>&1
+sudo docker-compose -f docker/docker-compose-test-net.yaml up -d 2>&1
 sudo docker ps -a
 ./scripts/createChannel.sh mychannel 3 5 false
