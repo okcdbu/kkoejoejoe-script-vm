@@ -6,10 +6,10 @@ export PATH=${PWD}/../bin:$PATH
 export FABRIC_CFG_PATH=${PWD}/configtx
 export VERBOSE=false
 REMOTE_IP="fabric-ca"
-REMOTE_PATH_BASE="${PWD}/organizations/fabric-ca"
+
 LOCAL_PATH_BASE="${PWD}/organizations/fabric-ca"
 USERNAME="ubuntu"
-
+REMOTE_PATH_BASE="/home/${USERNAME}/fabric-samples/test-network/organizations/fabric-ca"
 # Define the directories
 ORG_DIRS=("ordererOrg" "org1" "org2")
 
