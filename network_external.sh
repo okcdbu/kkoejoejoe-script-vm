@@ -20,7 +20,7 @@ for ORG in "${ORG_DIRS[@]}"; do
 
     echo "Downloading certificate for $ORG..."
     
-    sudo scp -i /home/okcdbu/temp.pem -o StrictHostKeyChecking=no "$USERNAME@$REMOTE_IP:$REMOTE_PATH" "$LOCAL_PATH"
+    sudo scp -i /home/${USERNAME}/temp.pem -o StrictHostKeyChecking=no "$USERNAME@$REMOTE_IP:$REMOTE_PATH" "$LOCAL_PATH"
     
     if [ $? -eq 0 ]; then
         echo "Successfully downloaded certificate for $ORG to $LOCAL_PATH"
