@@ -57,4 +57,6 @@ if [ $res -ne 0 ]; then
 fi
 sudo docker-compose -f docker/docker-compose-test-net.yaml up -d 2>&1
 sudo docker ps -a
+echo "Orderer 노드가 리더를 선출할 때까지 1분 대기합니다."
+sleep 60
 ./scripts/createChannel.sh mychannel 3 5 false
