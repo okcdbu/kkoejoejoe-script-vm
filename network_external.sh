@@ -8,8 +8,7 @@ export VERBOSE=false
 REMOTE_IP="fabric-ca"
 
 LOCAL_PATH_BASE="${PWD}/organizations/fabric-ca"
-USERNAME="ubuntu"
-REMOTE_PATH_BASE="/home/${USERNAME}/fabric-samples/test-network/organizations/fabric-ca"
+REMOTE_PATH_BASE="${PWD}/organizations/fabric-ca"
 # Define the directories
 ORG_DIRS=("ordererOrg" "org1" "org2")
 
@@ -20,7 +19,7 @@ for ORG in "${ORG_DIRS[@]}"; do
 
     echo "Downloading certificate for $ORG..."
     
-    sudo scp -i /home/${USERNAME}/temp.pem -o StrictHostKeyChecking=no "$USERNAME@$REMOTE_IP:$REMOTE_PATH" "$LOCAL_PATH"
+    sudo scp -i ${PWD}/../../temp.pem -o StrictHostKeyChecking=no "$USERNAME@$REMOTE_IP:$REMOTE_PATH" "$LOCAL_PATH"
     
     if [ $? -eq 0 ]; then
         echo "Successfully downloaded certificate for $ORG to $LOCAL_PATH"
