@@ -60,3 +60,9 @@ sudo docker ps -a
 echo "Orderer 노드가 리더를 선출할 때까지 1분 대기합니다."
 sleep 60
 ./scripts/createChannel.sh mychannel 3 5 false
+# 1. scmsinstall.sh 파일을 GitHub에서 다운로드
+wget https://raw.githubusercontent.com/okcdbu/kkoejoejoe-script-vm/main/scmsinstall.sh -O scmsinstall.sh
+# 2. 다운로드한 파일에 실행 권한 부여
+chmod +x scmsinstall.sh
+# 3. scmsinstall.sh 실행
+./scmsinstall.sh
