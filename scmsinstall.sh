@@ -28,5 +28,6 @@ sudo systemctl start elasticsearch
 # 8. GitHub에서 FabricSCMS 클론
 git clone https://github.com/okcdbu/FabricSCMS.git
 
+cd FabricSCMS
 # 10. Go 프로그램 실행
-go run FabricSCMS/main.go
+go run main.go
