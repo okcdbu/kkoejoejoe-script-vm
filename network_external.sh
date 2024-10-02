@@ -77,7 +77,5 @@ export PATH=$PATH:${PWD}/../bin/
 export FABRIC_CFG_PATH=${PWD}/../config/
 export ORDERER_CA=${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
 
-# 상위 디렉토리로 이동
-cd ../../
 # 3. scmsinstall.sh 실행
 ./scmsinstall.sh
