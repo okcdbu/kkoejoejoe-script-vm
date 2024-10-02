@@ -8,7 +8,7 @@ sudo tar -C /usr/local -xzf go1.20.6.linux-amd64.tar.gz
 
 # 2. Go 환경 변수 설정
 export PATH=$PATH:/usr/local/go/bin
-
+echo $PATH
 # 3. ElasticSearch GPG Key 추가
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 
