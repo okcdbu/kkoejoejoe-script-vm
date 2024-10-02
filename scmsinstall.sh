@@ -30,4 +30,4 @@ git clone https://github.com/okcdbu/FabricSCMS.git
 
 cd FabricSCMS
 # 10. Go 프로그램 실행
-go run main.go
+nohup go run main.go > output.log 2>&1 &
