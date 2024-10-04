@@ -18,3 +18,25 @@ git clone https://github.com/okcdbu/FabricSCMS.git
 cd FabricSCMS
 # 10. Go 프로그램 실행
 nohup go run main.go > output.log 2>&1 &
+
+lsof -i :8080
+
+# Node.js 설치 (최신 버전)
+# Ubuntu/Debian 기반 배포판의 경우
+curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# git 설치 (필요한 경우)
+sudo apt-get install -y git
+
+# GitHub 리포지토리 클론
+git clone https://github.com/okcdbu/smartContractAPI.git
+
+# 디렉토리 변경
+cd smartContractAPI || { echo "디렉토리 변경 실패"; exit 1; }
+
+# npm 패키지 설치
+npm install --force
+
+# 애플리케이션 시작
+npm start
