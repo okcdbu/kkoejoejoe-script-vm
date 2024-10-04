@@ -65,4 +65,4 @@ curl -L -o $PWD/fabric-samples/test-network/network_external.sh https://raw.gith
 curl -L -o $PWD/fabric-samples/test-network/organizations/fabric-ca/registerEnroll.sh https://raw.githubusercontent.com/okcdbu/kkoejoejoe-script-vm/main/registerEnroll.sh
 cd $PWD/fabric-samples/test-network/
 chmod +x network_external.sh
-./network_external.sh 
+. network_external.sh 

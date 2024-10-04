@@ -78,4 +78,4 @@ export FABRIC_CFG_PATH=${PWD}/../config/
 export ORDERER_CA=${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
 
 # 3. scmsinstall.sh 실행
-./scmsinstall.sh
+. scmsinstall.sh
