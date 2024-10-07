@@ -26,8 +26,6 @@ lsof -i :8080
 curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
-# git 설치 (필요한 경우)
-sudo apt-get install -y git
 
 # GitHub 리포지토리 클론
 git clone https://github.com/okcdbu/smartContractAPI.git
