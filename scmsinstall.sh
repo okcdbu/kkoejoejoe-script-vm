@@ -37,4 +37,4 @@ cd smartContractAPI || { echo "디렉토리 변경 실패"; exit 1; }
 npm install --force
 
 # 애플리케이션 시작
-npm start
+nohup npm start &
